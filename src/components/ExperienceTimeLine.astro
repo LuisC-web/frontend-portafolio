@@ -1,0 +1,31 @@
+---
+import type { ACTION_ERROR_CODES, ACTION_QUERY_PARAMS, ActionError } from "astro:actions";
+import ExprienceItem from "./ExprienceItem.astro";
+const EXPERIENCES = [
+    {
+        where: "Freelancer - Workana",
+        date: "March 2024 - Present",
+        title: "Full Stack Developer",
+        description:
+            "Designed and developed web applications using Laravel and React. Integrated third-party APIs and deployed to production environments.",
+    },
+    {
+        where: "Universidad Distrital",
+        date: "February 2023 - November 2023",
+        title: "IoT Research Project",
+        description:
+            "Developed firmware in C++ and MicroPython for sensors connected via LoRa, enabling real-time monitoring and data processing.",
+    },
+    {
+        where: "La Sazón Restaurant",
+        date: "January 2022 - December 2022",
+        title: "Tech Support and Automation",
+        description:
+            "Implemented automated inventory control solutions, created advanced spreadsheet systems, and provided general tech support.",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {EXPERIENCES.map((experience) => <ExprienceItem {...experience} />)}
+</ol>
