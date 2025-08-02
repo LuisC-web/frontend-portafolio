@@ -9,6 +9,7 @@ import MailIcon from "../assets/icons/MailIcon.astro";
 import ExperienceTimeLine from "../components/ExperienceTimeLine.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import CVIcon from "../assets/icons/CVIcon.astro";
+import Form from "../components/Form.astro";
 ---
 
 <Layout>
@@ -94,40 +95,7 @@ import CVIcon from "../assets/icons/CVIcon.astro";
         </SectionContainer>
         <SectionContainer id="contact-to-me">
             <h2 class="font-semibold text-2xl py-3 text-orange-500 flex items-center mb-3">Contacteme</h2>
-            <form action="https://formsubmit.co/luiscwebg@gmail.com" method="POST" class="border border-white rounded-2xl p-10 space-y-3">
-                <div class="flex flex-col space-y-3">
-                    <label for="name">Nombe</label>
-                    <input
-                        type="text"
-                        name="name"
-                        required
-                        class="rounded-2xl p-2 border border-white focus:outline-0"
-                        placeholder="Nombre"
-                    />
-                </div>
-                <div class="flex flex-col space-y-3">
-                    <label for="name">Correo</label>
-                    <input
-                        type="email"
-                        name="email"
-                        required
-                        class="rounded-2xl p-2 focus:outline-0 border border-white"
-                        placeholder="example@example.com"
-                    />
-                </div>
-                <div class="flex flex-col space-y-3 mt">
-                    <label for="name">Mensaje</label>
-                    <textarea
-                        name="message"
-                        placeholder="Describe tu proyecto, o cualquier cosa que quieras decirme"
-                        class="h-50 border border-white focus:outline-0 p-3 rounded-2xl"></textarea>
-                </div>
-                <button
-                    type="submit"
-                    class="rounded-2xl p-2 focus:outline-0 border bg-orange-500 text-xl font-medium hover:bg-amber-500/98 transition-colors uppercase cursor-pointer w-full"
-                    >Enviar</button
-                >
-            </form>
+            <Form />
         </SectionContainer>
     </main>
 </Layout>
