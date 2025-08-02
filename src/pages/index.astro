@@ -26,7 +26,7 @@ import CVIcon from "../assets/icons/CVIcon.astro";
                     Desarrollador web, administrador de sistemas linux, desarrollador de apps móvil y estudiante de Ing. Electrónica</span
                 >. De Córdoba, Colombia. Ubicado en Bogotá D.C.
             </h2>
-            <nav class="flex flex-col space-y-2 md:flex-row gap-2 mt-5 text-sm">
+            <nav class="flex flex-wrap space-y-2 gap-2 mt-5 text-sm">
                 <SocialPill href="https://github.com/LuisC-web">
                     <GithubIcon class="size-6" />LuisC-web
                 </SocialPill>
@@ -37,13 +37,97 @@ import CVIcon from "../assets/icons/CVIcon.astro";
                     <MailIcon class="size-6" />luiscwebg@gmail.com
                 </SocialPill>
             </nav>
+            <div class="space-y-3">
+                <p class="font-bold">Tecnologias que manejo:</p>
+                <div class="flex gap-3 flex-wrap">
+                    <SocialPill clas>
+                        <img
+                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcreazilla-store.fra1.digitaloceanspaces.com%2Ficons%2F3244252%2Fnextjs-icon-md.png&f=1&nofb=1&ipt=eaeb17ec3c9bbe3c3a20924958c67f3b78900d71049cd3d1de1e49692dac129c"
+                            class="size-6"
+                        />
+                        Nextjs
+                    </SocialPill>
+                    <SocialPill clas>
+                        <img
+                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fuploads-ssl.webflow.com%2F60a2acace1fd91aae61c497d%2F60ee04a3dee9b428a836325f_React_logo_logotype_emblem-p-3200.png&f=1&nofb=1&ipt=1a185725358d0156c332e35d89f9761e5e784be2512e22fad0a1e04e7fd180b1"
+                            class="size-6"
+                        />
+                        Reactjs
+                    </SocialPill>
+                    <SocialPill clas>
+                        <img
+                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Flogos%2Flarge%2F2x%2Fnodejs-icon-logo-png-transparent.png&f=1&nofb=1&ipt=33c98b7e4f8d79da6bb1776cab379db5eb7bca1cdcd80511cc3eb43ad684287a"
+                            class="size-6"
+                        />
+                        Nodejs
+                    </SocialPill>
+                    <SocialPill clas>
+                        <img
+                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F95%2FVue.js_Logo_2.svg%2F1200px-Vue.js_Logo_2.svg.png&f=1&nofb=1&ipt=7379260b972449de58f1896d341b099ca8a2c679296217fcbe2f23df0e5d59ae"
+                            class="size-6"
+                        />
+                        Vuejs
+                    </SocialPill>
+                    <SocialPill clas>
+                        <img
+                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.flyonui.com%2Ffy-assets%2Ficons%2Flaravel-icon.png&f=1&nofb=1&ipt=8dd3a19ddf32bbd05d8c246f58ba92c57b0f8681e1abbb47cf595caf4943574e"
+                            class="size-6"
+                        />
+                        Laravel
+                    </SocialPill>
+                    <SocialPill clas>
+                        <img
+                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.onu.ro%2Fwp%2Fwp-content%2Fuploads%2F2020%2F03%2Freact-native-logo-884x1024.png&f=1&nofb=1&ipt=d038f24cd8c04e0a2e933005f3be56fa01f5fb496a6e8e97dcf4a28ed6a5d39c"
+                            class="size-6"
+                        />
+                        React Native
+                    </SocialPill>
+                </div>
+            </div>
         </SectionContainer>
         <SectionContainer id="experiences">
             <h2 class="font-semibold text-2xl py-3 text-orange-500 flex items-center">
                 <CVIcon class="text-white" />
-                Experiences
+                <a href="https://drive.google.com/file/d/1uib26-SPiu7gqpYue545MLfoCtHIlko2/view" target="_blank"> Experiencia</a>
             </h2>
             <ExperienceTimeLine />
+        </SectionContainer>
+        <SectionContainer id="contact-to-me">
+            <h2 class="font-semibold text-2xl py-3 text-orange-500 flex items-center mb-3">Contacteme</h2>
+            <form action="https://formsubmit.co/luiscwebg@gmail.com" method="POST" class="border border-white rounded-2xl p-10 space-y-3">
+                <div class="flex flex-col space-y-3">
+                    <label for="name">Nombe</label>
+                    <input
+                        type="text"
+                        name="name"
+                        required
+                        class="rounded-2xl p-2 border border-white focus:outline-0"
+                        placeholder="Nombre"
+                    />
+                </div>
+                <div class="flex flex-col space-y-3">
+                    <label for="name">Correo</label>
+                    <input
+                        type="email"
+                        name="email"
+                        required
+                        class="rounded-2xl p-2 focus:outline-0 border border-white"
+                        placeholder="example@example.com"
+                    />
+                </div>
+                <div class="flex flex-col space-y-3 mt">
+                    <label for="name">Mensaje</label>
+                    <textarea
+                        name="message"
+                        placeholder="Describe tu proyecto, o cualquier cosa que quieras decirme"
+                        class="h-50 border border-white focus:outline-0 p-3 rounded-2xl"></textarea>
+                </div>
+                <button
+                    type="submit"
+                    class="rounded-2xl p-2 focus:outline-0 border bg-orange-500 text-xl font-medium hover:bg-amber-500/98 transition-colors uppercase cursor-pointer w-full"
+                    >Enviar</button
+                >
+            </form>
         </SectionContainer>
     </main>
 </Layout>
